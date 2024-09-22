@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from auntification.forms import CustomeUserCreationForm
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 def register(request):
     if request.method == 'POST':
@@ -22,7 +23,7 @@ def register(request):
         template_name="auntification/register.html",
         context={"form": form}
     )
-
+    
 def login_system(request):
     if request.method == "POST":
         form_login = AuthenticationForm(request, data=request.POST)

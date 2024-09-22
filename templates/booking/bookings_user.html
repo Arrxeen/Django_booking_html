@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for booking in bookings %}
+
+<a>{{ booking.user.username }}</a>
+<p>{{ booking.room.number }}</p>
+<p>{{ booking.room.descriptiom}}</p>
+
+{% endfor %}
+
+{% endblock %}
