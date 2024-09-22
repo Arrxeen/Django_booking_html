@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul>
+    {% for room in rooms %}
+    <li>
+        <h1>Room #{{ room.number }}</h1>
+        <h2>Capacity: {{room.capacity}}</h2>
+        <p>Location: {{room.locatio}}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col" class="g-col-3 g-start-2">#</th>
+        <th scope="col">Capacity</th>
+        <th scope="col">location</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for room in rooms %}
+        <tr>
+            <td>Room #{{ room.number }}</td>
+            <td>Capacity: {{room.capacity}}</td>
+            <td>Location: {{room.locatio}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
