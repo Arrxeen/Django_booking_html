@@ -7,9 +7,11 @@
         {% endfor %}
     </ul>
     {% endif %}
+    <div class="child">
     <form method="post" action="{% url 'login' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">login</button>
+        <button type="submit" class="btn btn-outline-success">login</button>
     </form>
+    </div>
 {% endblock %}

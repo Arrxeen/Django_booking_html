@@ -1,17 +1,22 @@
 {% extends "base.html" %}
-
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/tooplate.css' %}">
+</head>
 {% block content %}
-<form method="POST" action="{% url 'book-room' %}">
-    {% csrf_token %}
-    <label for="room=number">room number</label>
-    <input type="number" id="room=number" name="room=number">
-    <br>
-    <label for="start=time">start time</label>
-    <input type="datetime-local" id="start=time" name="start=time">
-    <br>
-    <label for="end=time">end time</label>
-    <input type="datetime-local" id="end=time" name="end=time">
-    <br>
-    <button type="submit">Book</button>
-</form>
-{% endblock %}
+<div class="child">
+    <form method="POST" action="{% url 'book-room' %}" class="tm-bg-black p-5 h-100">
+        {% csrf_token %}
+            <label for="room=number" >room number</label>
+            <input type="number" id="room=number" name="room=number" class="validate">
+        <br>
+            <label for="start=time">start time</label>
+            <input type="datetime-local" id="start=time" name="start=time" class="validate">
+        <br>
+            <label for="end=time">end time</label>
+            <input type="datetime-local" id="end=time" name="end=time" class="validate">
+        <br>
+            <button type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Book</button>
+    </form>
+</div>
+    {% endblock %}

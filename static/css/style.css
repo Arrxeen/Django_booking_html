@@ -1,0 +1,64 @@
+.child{
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.1),rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255,0.2);
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-top: 200px;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: x-large;
+    font-family:  "Times New Roman", Times, serif;
+    color: black;
+    
+}
+
+.child-detail{
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.1),rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255,0.2);
+    border-radius: 6px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: x-large;
+    font-family:  "Times New Roman", Times, serif;
+    color: black;
+}
+
+.table-classic{
+    width: 1500px;
+}
+
+.child-table{
+    background: linear-gradient(90deg, rgba(255, 255, 255,0.1),rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255,0.2);
+    border-radius: 6px;
+    width: 1520px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.td-classic{
+    font-size: x-large;
+}
+
+.td-classic-th{
+    font-size: x-large;
+    font-family:  "Times New Roman", Times, serif;
+}
+
+.back-image{
+    background-image: url('img/backgraund-img.jpg');
+    background-size: cover;
+}

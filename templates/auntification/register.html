@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -10,7 +11,14 @@
     {% endif %}
     <form method="post" action="{% url 'register' %}">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">register</button>
+        <!-- {{ form.as_p }} -->
+        <div class="child">
+          {% for field in form %}
+              <label>{{field.label_tag}}</label><br>
+              <label>{{field}}</label><br>     
+        {% endfor %}
+        <br>
+        <button type="submit" class="btn btn-outline-success">register</button>
+    </div>
     </form>
     {% endblock %}

@@ -1,32 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul>
-    {% for room in rooms %}
-    <li>
-        <h1>Room #{{ room.number }}</h1>
-        <h2>Capacity: {{room.capacity}}</h2>
-        <p>Location: {{room.locatio}}</p>
-    </li>
-    {% endfor %}
-</ul>
-
-<table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col" class="g-col-3 g-start-2">#</th>
-        <th scope="col">Capacity</th>
-        <th scope="col">location</th>
-    </tr>
-    </thead>
-    <tbody>
-        {% for room in rooms %}
-        <tr>
-            <td>Room #{{ room.number }}</td>
-            <td>Capacity: {{room.capacity}}</td>
-            <td>Location: {{room.locatio}}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<body class="#">
+    <div class="child-table">
+        <thead>
+            <table class="table-classic table-bordered">
+                <tr class="td-classic-th">
+                    <th scope="col">#</th>
+                    <th scope="col">Capacity</th>
+                    <th scope="col">location</th>
+                    <th scope="col">Descriptiom</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for room in rooms %}
+                <tr class="td-classic">
+                    <td >#{{ room.number }}</td>
+                    <td>{{ room.capacity }}</td>
+                    <td>{{ room.locatio }}</td>
+                    <td>{{ room.descriptiom }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
 {% endblock %}
